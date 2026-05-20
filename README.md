@@ -1,4 +1,5 @@
 # VectorHire
+![CI Pipeline](https://github.com/mohityadav197/vectorhire/actions/workflows/ci.yml/badge.svg)
 
 **A high-speed, multi-agent AI resume evaluation engine.**
 
