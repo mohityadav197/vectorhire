@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.16), transparent 28%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #f8fafc;
+}
+
+textarea,
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes loaderTextPulse {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes auroraShift {
+  0% {
+    transform: translate3d(-10%, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(8%, -3%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-10%, 0, 0) scale(1);
+  }
+}
+
+@keyframes ringProgress {
+  from {
+    stroke-dashoffset: var(--ring-full-offset);
+  }
+  to {
+    stroke-dashoffset: var(--ring-target-offset);
+  }
+}
+
+.metric-ring-progress {
+  animation: ringProgress 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.loader-text-pulse {
+  animation: loaderTextPulse 1.6s ease-in-out infinite;
+}
+
+.aurora-orb {
+  animation: auroraShift 8s ease-in-out infinite;
+}
+
+.scroll-panel {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.35) transparent;
+}
+
+.scroll-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}

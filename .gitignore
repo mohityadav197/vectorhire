@@ -1,0 +1,71 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# FastAPI / Uvicorn / logs
+*.log
+logs/
+uvicorn.log
+
+# Node / JavaScript / Vite
+node_modules/
+dist/
+build/
+.vite/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend caches
+.eslintcache
+.parcel-cache/
+
+# Docker / containers / local volumes
+docker-data/
+volumes/
+data/
+tmp/
+.temp/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
