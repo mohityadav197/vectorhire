@@ -12,7 +12,6 @@ services:
       - ./backend/.env
     volumes:
       - ./backend:/app
-    restart: unless-stopped
 
   frontend:
     build:
@@ -28,4 +27,3 @@ services:
       - /app/node_modules
     depends_on:
       - backend
-    restart: unless-stopped
